@@ -1,5 +1,5 @@
 {
-  "name": "Kimbie Dark ++",
+  "name": "kimbie dark +++ Jordo",
   "type": "dark",
   "colors": {
     "activityBar.background": "#221a0f",
@@ -128,7 +128,7 @@
         "punctuation.definition.comment"
       ],
       "settings": {
-        "foreground": "#a57a4c"
+        "foreground": "#a57a4c" // Default comment color (overridden by C++ specific below)
       }
     },
     {
@@ -148,7 +148,7 @@
         "punctuation.separator.object.ruby"
       ],
       "settings": {
-        "foreground": "#d3af86"
+        "foreground": "#d3af86" // Default punctuation (overridden by C++ specific below)
       }
     },
     {
@@ -162,7 +162,7 @@
       "name": "Operators",
       "scope": "keyword.operator",
       "settings": {
-        "foreground": "#d3af86"
+        "foreground": "#d3af86" // Default operator color (overridden by C++ specific below)
       }
     },
     {
@@ -182,20 +182,20 @@
         "keyword.operator.expression"
       ],
       "settings": {
-        "foreground": "#98676a"
+        "foreground": "#98676a" // Default keyword color (overridden by C++ specific below)
       }
     },
     {
       "name": "Variables",
       "scope": [
         "variable",
-        "variable.parameter.function",
+        "variable.parameter.function", // Note: C++ rule below overrides this for C++
         "support.variable.property",
         "comment.line.parameter.yard",
         "entity.name.function.member"
       ],
       "settings": {
-        "foreground": "#dc3958"
+        "foreground": "#dc3958" // Default variable color (overridden by C++ specific below)
       }
     },
     {
@@ -205,17 +205,17 @@
         "meta.require",
         "support.function.any-method",
         "support.function",
-        "keyword.operator.new"
+        "keyword.operator.new" // Note: C++ rule below overrides this for C++
       ],
       "settings": {
-        "foreground": "#8ab1b0"
+        "foreground": "#8ab1b0" // Default function color (overridden by C++ specific below)
       }
     },
     {
       "name": "Namespaces",
       "scope": "entity.name.namespace",
       "settings": {
-        "foreground": "#f06431"
+        "foreground": "#f06431" // Default namespace color (overridden by C++ specific below)
       }
     },
     {
@@ -232,7 +232,7 @@
         "support.type.builtin"
       ],
       "settings": {
-        "foreground": "#f06431"
+        "foreground": "#f06431" // Default class/type color (overridden by C++ specific below)
       }
     },
     {
@@ -246,7 +246,7 @@
       "name": "Storage",
       "scope": "storage",
       "settings": {
-        "foreground": "#98676a"
+        "foreground": "#98676a" // Default storage color (overridden by C++ specific below)
       }
     },
     {
@@ -256,14 +256,14 @@
         "constant.other.symbol"
       ],
       "settings": {
-        "foreground": "#889b4a"
+        "foreground": "#889b4a" // Default string color (overridden by C++ specific below)
       }
     },
     {
       "name": "Integers",
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#f79a32"
+        "foreground": "#f79a32" // Default numeric color (overridden by C++ specific below)
       }
     },
     {
@@ -290,7 +290,7 @@
         "variable.other.enummember"
       ],
       "settings": {
-        "foreground": "#f79a32"
+        "foreground": "#f79a32" // Default constant color (overridden by C++ specific below)
       }
     },
     {
@@ -514,6 +514,110 @@
       }
     },
     // --- C++ Enhancements Start ---
+    // --- Broad C++ Wacky Colors Start ---
+    {
+      "name": "WACKY C++ Entities (Classes, Functions, Namespaces)",
+      "scope": "entity.name.cpp",
+      "settings": {
+        "foreground": "#FF0000"
+      } // Red
+    },
+    {
+      "name": "WACKY C++ Scope Resolution Name", // ADDED THIS RULE
+      "scope": "entity.name.scope-resolution.cpp",
+      "settings": {
+        "foreground": "#FF0000"
+      } // Red
+    },
+    {
+      "name": "WACKY C++ Operators",
+      "scope": "keyword.operator.cpp",
+      "settings": {
+        "foreground": "#00FF00"
+      } // Lime Green
+    },
+    {
+      "name": "WACKY C++ Other Variables",
+      "scope": "variable.other.cpp",
+      "settings": {
+        "foreground": "#FFA500"
+      } // Orange
+    },
+    {
+      "name": "WACKY C++ Language Variables",
+      "scope": "variable.language.cpp",
+      "settings": {
+        "foreground": "#FFA500"
+      } // Orange (will be overridden by specific 'this' rule)
+    },
+    {
+      "name": "WACKY C++ Storage Modifiers",
+      "scope": "storage.modifier.cpp",
+      "settings": {
+        "foreground": "#00FFFF"
+      } // Cyan
+    },
+    {
+      "name": "WACKY C++ Storage Types",
+      "scope": "storage.type.cpp",
+      "settings": {
+        "foreground": "#FFFF00"
+      } // Yellow
+    },
+    {
+      "name": "WACKY C++ Language Constants",
+      "scope": "constant.language.cpp",
+      "settings": {
+        "foreground": "#ADFF2F"
+      } // Green Yellow (will be overridden by specific 'nullptr' rule)
+    },
+    {
+      "name": "WACKY C++ Numeric Constants",
+      "scope": "constant.numeric.cpp",
+      "settings": {
+        "foreground": "#FF1493"
+      } // Deep Pink
+    },
+    {
+      "name": "WACKY C++ Strings",
+      "scope": "string.quoted.cpp",
+      "settings": {
+        "foreground": "#7FFF00"
+      } // Chartreuse
+    },
+    {
+      "name": "WACKY C++ Punctuation",
+      "scope": "punctuation.cpp",
+      "settings": {
+        "foreground": "#4682B4"
+      } // Steel Blue (will be overridden by specific '::' rule)
+    },
+    {
+      "name": "WACKY C++ Control Keywords",
+      "scope": "keyword.control.cpp",
+      "settings": {
+        "foreground": "#FF69B4"
+      } // Hot Pink
+    },
+    {
+      "name": "WACKY C++ Other Keywords",
+      "scope": "keyword.other.cpp",
+      "settings": {
+        "foreground": "#DA70D6"
+      } // Orchid (will be overridden by specific misc keyword rules)
+    },
+    {
+      "name": "WACKY C++ Comments",
+      "scope": [
+        "comment.line.cpp",
+        "comment.block.cpp"
+      ],
+      "settings": {
+        "foreground": "#A9A9A9"
+      } // Dark Gray
+    },
+    // --- Broad C++ Wacky Colors End ---
+    // --- Specific C++ Enhancements Start --- (Original Wacky Rules Follow)
     {
       "name": "C++ Function Parameters",
       "scope": [
@@ -521,7 +625,7 @@
         "variable.parameter.function" // Override existing rule for parameters
       ],
       "settings": {
-        "foreground": "#d3af86" // Beige (Spec: Line 28, 77)
+        "foreground": "#FF00FF" // WACKY: Magenta (was #d3af86)
       }
     },
     {
@@ -533,7 +637,7 @@
         "keyword.operator.cast.const_cast.cpp"
       ],
       "settings": {
-        "foreground": "#98676a" // Brown/Purple (Keyword) (Spec: Line 32, 79)
+        "foreground": "#00FF00" // WACKY: Lime Green (was #98676a)
       }
     },
     {
@@ -545,7 +649,7 @@
         "keyword.operator.delete" // Explicitly cover non-.cpp scope too
       ],
       "settings": {
-        "foreground": "#98676a" // Brown/Purple (Keyword) (Spec: Line 55, 80)
+        "foreground": "#00FF00" // WACKY: Lime Green (was #98676a)
       }
     },
     {
@@ -556,7 +660,7 @@
         "keyword.other.default.constructor.cpp" // Spec: Line 83
       ],
       "settings": {
-        "foreground": "#98676a" // Brown/Purple (Keyword)
+        "foreground": "#00FF00" // WACKY: Lime Green (was #98676a)
       }
     },
     {
@@ -567,14 +671,14 @@
         "storage.modifier.lambda.mutable.cpp" // Lambda mutable (Spec: Line 86)
       ],
       "settings": {
-        "foreground": "#98676a" // Brown/Purple (Keyword/Storage)
+        "foreground": "#00FF00" // WACKY: Lime Green (was #98676a)
       }
     },
     {
       "name": "C++ 'this' pointer",
       "scope": "variable.language.this.cpp", // Explicit rule for 'this' (Spec: Line 63, 87)
       "settings": {
-        "foreground": "#dc3958" // Red (Variable)
+        "foreground": "#FFA500" // WACKY: Orange (was #dc3958)
       }
     },
     {
@@ -582,7 +686,7 @@
       // Explicit rule in case the general 'constant' rule doesn't catch it
       "scope": "constant.language.nullptr.cpp", // Spec: Line 59, 88
       "settings": {
-        "foreground": "#f79a32" // Orange (Constant)
+        "foreground": "#ADFF2F" // WACKY: Green Yellow (was #f79a32)
       }
     },
     {
@@ -593,7 +697,7 @@
         "punctuation.separator.namespace.access" // Common alternative scope
       ],
       "settings": {
-        "foreground": "#d3af86" // Beige (Punctuation/Operator) (Spec: Line 71, 89)
+        "foreground": "#FF00FF" // WACKY: Magenta (was #d3af86)
       }
     },
     {
@@ -601,7 +705,7 @@
       // If needed based on testing
       "scope": "storage.type.function.pointer.cpp", // Spec: Line 67, 90
       "settings": {
-        "foreground": "#98676a" // Brown/Purple (Storage/Keyword)
+        "foreground": "#00FF00" // WACKY: Lime Green (was #98676a)
       }
     }
     // --- C++ Enhancements End ---

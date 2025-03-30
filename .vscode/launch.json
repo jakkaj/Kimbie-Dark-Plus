@@ -12,7 +12,7 @@
             "runtimeExecutable": "${execPath}",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "./test-workspace" // Automatically open the test workspace
+                "/workspaces/Kimbie-Dark-Plus/test-workspace" // Automatically open the test workspace
             ]
         }
     ]
