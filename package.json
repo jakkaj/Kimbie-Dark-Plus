@@ -1,6 +1,6 @@
 {
-    "name": "kimbie-dark-plus",
-    "displayName": "Kimbie Dark+",
+    "name": "kimbie-dark-plus-plus",
+    "displayName": "Kimbie Dark ++",
     "description": "Kimbie Dark improved",
     "version": "1.3.0",
     "author": "Dāvis Namsons",
@@ -16,9 +16,9 @@
     "contributes": {
         "themes": [
             {
-                "label": "Kimbie Dark+",
+                "label": "Kimbie Dark ++",
                 "uiTheme": "vs-dark",
-                "path": "./themes/Kimbie Dark+-color-theme.json"
+                "path": "./themes/Kimbie Dark ++-color-theme.json"
             }
         ]
     },

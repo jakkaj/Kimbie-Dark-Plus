@@ -1,5 +1,5 @@
 <div style='text-align: center;'>
-  <h1>Kimbie Dark+</h1>
+  <h1>Kimbie Dark ++</h1>
 </div>
 
 [![Creative Commons](https://img.shields.io/badge/license-CC--BY--SA%204.0-orange.svg?style=flat-square)](http://creativecommons.org/licenses/by-sa/4.0/)
@@ -8,6 +8,17 @@
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/dnamsons.kimbie-dark-plus.svg)](https://marketplace.visualstudio.com/items?itemName=dnamsons.kimbie-dark-plus)
 
 A color scheme inspired by [Cold Spring Fault Less Youth](http://www.discogs.com/Mount-Kimbie-Cold-Spring-Fault-Less-Youth/master/561611), originally created by [Jan T. Sott](https://github.com/idleberg/Kimbie.tmTheme), modified by [Dāvis Namsons](https://github.com/dnamsons).
+
+## C++ Improvements
+
+This theme includes enhanced syntax highlighting for C++, leveraging the scopes provided by the popular ["Better C++ Syntax"](https://marketplace.visualstudio.com/items?itemName=jeff-hykin.better-cpp-syntax) extension.
+
+**Note:** For the best experience, please ensure you have the "Better C++ Syntax" extension installed and enabled.
+
+### C++ Example (with Better C++ Syntax extension)
+
+*Add a screenshot demonstrating C++ syntax highlighting here (e.g., using `test-workspace/main.cpp`)*
+
 
 ## Improvements
 

@@ -1,5 +1,5 @@
 {
-  "name": "Kimbie Dark+",
+  "name": "Kimbie Dark ++",
   "type": "dark",
   "colors": {
     "activityBar.background": "#221a0f",
@@ -123,7 +123,10 @@
     },
     {
       "name": "Comments",
-      "scope": ["comment", "punctuation.definition.comment"],
+      "scope": [
+        "comment",
+        "punctuation.definition.comment"
+      ],
       "settings": {
         "foreground": "#a57a4c"
       }
@@ -248,7 +251,10 @@
     },
     {
       "name": "Strings",
-      "scope": ["string", "constant.other.symbol"],
+      "scope": [
+        "string",
+        "constant.other.symbol"
+      ],
       "settings": {
         "foreground": "#889b4a"
       }
@@ -365,7 +371,10 @@
     },
     {
       "name": "Bold",
-      "scope": ["markup.bold", "punctuation.definition.bold"],
+      "scope": [
+        "markup.bold",
+        "punctuation.definition.bold"
+      ],
       "settings": {
         "fontStyle": "bold",
         "foreground": "#f06431"
@@ -373,7 +382,10 @@
     },
     {
       "name": "Italic",
-      "scope": ["markup.italic", "punctuation.definition.italic"],
+      "scope": [
+        "markup.italic",
+        "punctuation.definition.italic"
+      ],
       "settings": {
         "fontStyle": "italic",
         "foreground": "#98676a"
@@ -500,6 +512,98 @@
       "settings": {
         "foreground": "#7e602c"
       }
+    },
+    // --- C++ Enhancements Start ---
+    {
+      "name": "C++ Function Parameters",
+      "scope": [
+        "variable.parameter.cpp",
+        "variable.parameter.function" // Override existing rule for parameters
+      ],
+      "settings": {
+        "foreground": "#d3af86" // Beige (Spec: Line 28, 77)
+      }
+    },
+    {
+      "name": "C++ Cast Operators",
+      "scope": [
+        "keyword.operator.cast.static_cast.cpp",
+        "keyword.operator.cast.dynamic_cast.cpp",
+        "keyword.operator.cast.reinterpret_cast.cpp",
+        "keyword.operator.cast.const_cast.cpp"
+      ],
+      "settings": {
+        "foreground": "#98676a" // Brown/Purple (Keyword) (Spec: Line 32, 79)
+      }
+    },
+    {
+      "name": "C++ Memory Allocation Operators",
+      "scope": [
+        "keyword.operator.new.cpp", // Ensure correct color
+        "keyword.operator.delete.cpp",
+        "keyword.operator.new", // Override existing rule for 'new'
+        "keyword.operator.delete" // Explicitly cover non-.cpp scope too
+      ],
+      "settings": {
+        "foreground": "#98676a" // Brown/Purple (Keyword) (Spec: Line 55, 80)
+      }
+    },
+    {
+      "name": "C++ Misc Keywords",
+      "scope": [
+        "keyword.other.using.directive.cpp", // Spec: Line 47, 81
+        "keyword.other.operator.overload.cpp", // Spec: Line 51, 82
+        "keyword.other.default.constructor.cpp" // Spec: Line 83
+      ],
+      "settings": {
+        "foreground": "#98676a" // Brown/Purple (Keyword)
+      }
+    },
+    {
+      "name": "C++ Function Specifiers (override, final, constexpr, etc.)",
+      // Using a broader selector scoped to C++ for maintainability
+      "scope": [
+        "source.cpp storage.modifier.specifier", // Catches override, final, constexpr, virtual, explicit, inline (Spec: Line 39, 43, 85, 207)
+        "storage.modifier.lambda.mutable.cpp" // Lambda mutable (Spec: Line 86)
+      ],
+      "settings": {
+        "foreground": "#98676a" // Brown/Purple (Keyword/Storage)
+      }
+    },
+    {
+      "name": "C++ 'this' pointer",
+      "scope": "variable.language.this.cpp", // Explicit rule for 'this' (Spec: Line 63, 87)
+      "settings": {
+        "foreground": "#dc3958" // Red (Variable)
+      }
+    },
+    {
+      "name": "C++ nullptr constant",
+      // Explicit rule in case the general 'constant' rule doesn't catch it
+      "scope": "constant.language.nullptr.cpp", // Spec: Line 59, 88
+      "settings": {
+        "foreground": "#f79a32" // Orange (Constant)
+      }
+    },
+    {
+      "name": "C++ Scope Resolution Operator",
+      // Explicit rule for clarity, though likely covered by general punctuation
+      "scope": [
+        "punctuation.separator.scope-resolution.cpp",
+        "punctuation.separator.namespace.access" // Common alternative scope
+      ],
+      "settings": {
+        "foreground": "#d3af86" // Beige (Punctuation/Operator) (Spec: Line 71, 89)
+      }
+    },
+    {
+      "name": "C++ Function Pointer Type Modifier",
+      // If needed based on testing
+      "scope": "storage.type.function.pointer.cpp", // Spec: Line 67, 90
+      "settings": {
+        "foreground": "#98676a" // Brown/Purple (Storage/Keyword)
+      }
     }
+    // --- C++ Enhancements End ---
   ]
 }
